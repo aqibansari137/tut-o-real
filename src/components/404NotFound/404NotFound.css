@@ -1,0 +1,16 @@
+.nf-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nf-container h1{
+    font-size: 10em;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+.nf-container h2{
+    font-size: 4em;
+    margin-top: 0;
+    font-weight: 100;
+}

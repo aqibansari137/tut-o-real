@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import Dashboard from './components/Dashbard/Dashboard';
+import Navbar from './components/Navbar/Navbar';
+import Sidebar from './components/Sidebar/Sidebar';
+import menu from './assets/menu-bar.svg'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import NotFound404 from './components/404NotFound/404NotFound';
 
 function App() {
+
+  const toggleSidebar = () => {
+    let sidebar = document.getElementById('sideDiv').style.display
+    if (sidebar === '' || sidebar === 'none')
+      document.getElementById('sideDiv').style.display = 'inline-block';
+    else
+      document.getElementById('sideDiv').style.display = 'none';
+  }
+
+  const hideSidebar = () => {
+    if (window.outerWidth < 600)
+      document.getElementById('sideDiv').style.display = 'none';
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className='app-container'>
+      <BrowserRouter>
+        <div className="nav" >
+          <img src={menu} alt="menu" className='menu-btn' onClick={() => toggleSidebar()} />
+          <Navbar />
+        </div>
+        <div className='side' id='sideDiv'>
+          <Sidebar />
+        </div>
+        <div className="dash" onClick={() => hideSidebar()}>
+          <Routes>
+            <Route path='/' element={<Dashboard />} />
+            <Route path='*' element={<NotFound404 />} />
+          </Routes>
+        </div>
+      </BrowserRouter >
+    </div >
   );
 }
 

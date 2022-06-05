@@ -1,0 +1,50 @@
+.mob-nav a {
+    text-decoration: none;
+    border: 1px solid;
+    color: black;
+}
+
+.mob-nav {
+    display: none;
+}
+.side-menu{
+    display: flex;
+    flex-direction: column;    
+}
+.side-menu a{
+    color: black;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    padding: 0.7em;
+}
+.side-menu a:hover{
+        box-shadow: 0 0 3px 0;
+    }
+.side-menu .active{
+    box-shadow: inset 0 0 7px 0;
+}
+.side-srch{
+    background: url("../../assets/search.svg")right no-repeat;
+    background-position: 95%;
+    font-size: 1em;
+    padding: 0.5em;
+    background-size: 1.25em;
+    border: none;
+    box-shadow: 0 0 4px 0;
+}
+.side-title{
+    font-size: 1.25em;
+    padding-bottom: 1em;
+    padding-left: 0.25em;
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+}
+
+@media only screen and (max-width:700px) {
+    .mob-nav{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        overflow:auto;
+        height: 45px;
+    }
+}

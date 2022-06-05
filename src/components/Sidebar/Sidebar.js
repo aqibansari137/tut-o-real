@@ -1,0 +1,45 @@
+import React, { useEffect, useState } from 'react'
+import { NavLink } from 'react-router-dom'
+import './Sidebar.css'
+
+export default function Sidebar() {
+    const [srchText, setSrchText] = useState('')
+    const [fltrList, setFltrList] = useState([])
+    const [hide, setHide] = useState(false)
+    const [menuList] = useState([
+        {
+            title: 'Carrot',
+            path: '/carrot',
+            active: false
+        },
+        {
+            title: 'Apple',
+            path: '/apple',
+            active: false
+        },
+        {
+            title: 'Banana',
+            path: '/banana',
+            active: false
+        },
+    ])
+    useEffect(() => {
+        setFltrList(menuList.filter(item => item.title.toLowerCase().includes(srchText.toLowerCase())));
+
+    }, [srchText, menuList])
+
+    return (
+        <div className='side-menu'>
+            <div className='mob-nav'>
+                <NavLink to='/'>Dashboard</NavLink>
+                <NavLink to='/about'>About</NavLink>
+                <NavLink to='/contact'>Contact</NavLink>
+            </div>
+            <input type="text" placeholder='Search' value={srchText} onChange={(e) => setSrchText(e.target.value)} className='side-srch' />
+            <p className='side-title'>Topics:</p>
+            {fltrList.map((menu, index) => {
+                return <NavLink key={index} to={menu.path}>{menu.title}</NavLink>
+            })}
+        </div >
+    )
+}

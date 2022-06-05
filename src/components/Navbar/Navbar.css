@@ -1,0 +1,27 @@
+.nav-container{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-container .active{
+    box-shadow: 0 0 2px 0;
+}
+.nav-container a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    padding: 1.12em 1.5em;
+}
+.nav-container a:hover{
+    box-shadow: 0 0 2px 0;
+}
+.nav-link{
+    display: inline-block;
+}
+
+@media only screen and (max-width:700px){
+    .nav-link{
+        display: none;
+    }
+}
