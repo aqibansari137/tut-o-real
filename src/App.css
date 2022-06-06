@@ -27,8 +27,10 @@
 .dash {
   width: 100%;
   grid-area: myArea3;
-  height: 98%;
+  height: 100vh;
   background-color: #f7fbfe;
+  overflow: auto;
+  scroll-behavior: smooth;
 }
 
 .app-container {
@@ -60,3 +62,50 @@
       transition: all 1s ease-in-out;
     }
 }
+
+/* Main Component styling */
+.main-container {
+  padding: 15px;
+  border: 2px solid;
+  margin: 1em;
+  border-radius: 0.5em;
+}
+.main-container .nav-section{
+  padding: 0.2em 1em;
+  background-color: rgb(255, 244, 228);
+}
+
+
+.main-container h1{
+  font-size: 2.5em;
+  text-align: center;
+  font-style: italic;
+  margin-top: 0.2em;
+  padding: 0.2em 0;
+  background-color: rgba(227, 228, 239, 0.943);
+}
+.main-container p{
+  font-size: 1.5em;
+  text-align: justify;
+}
+.main-container li{
+  font-size: 1.5em;
+}
+.main-container a{
+  text-decoration: none;
+  /* color: rgba(42, 104, 137, 0.943); */
+  color: rgba(17, 122, 113, 0.993);
+}
+.main-container img{
+  width: 100%;
+  border: 1px solid;
+  transform: scale(0.96);
+}
+.main-container footer{
+  text-align: center;
+  font-size: 1.5em;
+  background-color: rgba(227, 228, 239, 0.943);
+  padding: 0.2em 0;
+}
+
+

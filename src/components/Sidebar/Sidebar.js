@@ -2,27 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './Sidebar.css'
 
-export default function Sidebar() {
+export default function Sidebar({ routeList }) {
     const [srchText, setSrchText] = useState('')
     const [fltrList, setFltrList] = useState([])
-    const [hide, setHide] = useState(false)
-    const [menuList] = useState([
-        {
-            title: 'Carrot',
-            path: '/carrot',
-            active: false
-        },
-        {
-            title: 'Apple',
-            path: '/apple',
-            active: false
-        },
-        {
-            title: 'Banana',
-            path: '/banana',
-            active: false
-        },
-    ])
+    const [menuList] = useState(routeList)
     useEffect(() => {
         setFltrList(menuList.filter(item => item.title.toLowerCase().includes(srchText.toLowerCase())));
 

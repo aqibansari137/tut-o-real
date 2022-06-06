@@ -3,11 +3,11 @@ import './Dashboard.css'
 
 export default function Dashboard() {
     return (
-        <div>
-            <div className='dash-container'>
+        <div className='main-container'>
 
-                <h1>Tut-O-Real</h1>
-            </div>
+
+            <h1>Tut-O-Real</h1>
+
         </div>
     )
 }
