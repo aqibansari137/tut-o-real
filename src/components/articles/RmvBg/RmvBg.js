@@ -1,10 +1,10 @@
 import React from 'react'
 import './RmvBg.css'
-import rmvbg1 from '../../../assets/article_images/rmvbg1.png'
-import rmvbg2 from '../../../assets/article_images/rmvbg2.png'
-import rmvbg3 from '../../../assets/article_images/rmvbg3.png'
-import rmvbg4 from '../../../assets/article_images/rmvbg4.png'
-import rmvbg5 from '../../../assets/article_images/rmvbg5.png'
+import rmvbg1 from '../../../assets/article_images/rmvbg/rmvbg1.png'
+import rmvbg2 from '../../../assets/article_images/rmvbg/rmvbg2.png'
+import rmvbg3 from '../../../assets/article_images/rmvbg/rmvbg3.png'
+import rmvbg4 from '../../../assets/article_images/rmvbg/rmvbg4.png'
+import rmvbg5 from '../../../assets/article_images/rmvbg/rmvbg5.png'
 export default function RmvBg() {
     return (
         <div className='main-container'>
@@ -61,7 +61,7 @@ export default function RmvBg() {
             <ul>
                 <li>After uploading the background Click on Download.</li>
             </ul>
-            <footer>😊 Happy to Help!! 😊</footer>
+            <footer>😊Thanks for Visiting!!😊</footer>
         </div>
     )
 }

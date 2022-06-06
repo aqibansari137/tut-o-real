@@ -5,8 +5,10 @@ import Sidebar from './components/Sidebar/Sidebar';
 import menu from './assets/menu-bar.svg'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import NotFound404 from './components/404NotFound/404NotFound';
-import { useState } from 'react';
-import RmvBg from './components/articles/RmvBg.js/RmvBg';
+import { useEffect, useState } from 'react';
+import RmvBg from './components/articles/RmvBg/RmvBg';
+import arrow from './assets/arrow-up.svg';
+import ActivateWin10 from './components/articles/ActivateWin10/ActivateWin10';
 
 function App() {
   const [routeList] = useState([
@@ -16,7 +18,20 @@ function App() {
       element: <RmvBg />,
       active: false,
     },
+    {
+      path: '/activatewindows',
+      title: 'Activate Windows 10',
+      element: <ActivateWin10 />,
+      active: false,
+    },
   ])
+
+  useEffect(() => {
+    const scroller = () => {
+      console.log('hi', document.getElementById('dash-ele').scroll)
+    }
+    window.addEventListener('scroll', scroller)
+  })
 
   const toggleSidebar = () => {
     let sidebar = document.getElementById('sideDiv').style.display
@@ -30,6 +45,10 @@ function App() {
     if (window.outerWidth < 600)
       document.getElementById('sideDiv').style.display = 'none';
   }
+  const toTheTop = () => {
+    document.getElementById('dash-ele').scrollTop = 0;
+  }
+
   return (
     <div className='app-container'>
       <BrowserRouter>
@@ -40,7 +59,7 @@ function App() {
         <div className='side' id='sideDiv'>
           <Sidebar routeList={routeList} />
         </div>
-        <div className="dash" onClick={() => hideSidebar()}>
+        <div className="dash" id='dash-ele' onClick={() => hideSidebar()}>
           <Routes>
             <Route path='/' element={<Dashboard />} />
             {routeList.map((route, index) => {
@@ -48,6 +67,7 @@ function App() {
             })}
             <Route path='*' element={<NotFound404 />} />
           </Routes>
+          <img src={arrow} className="toTop" alt="arrow" onClick={() => toTheTop()} />
         </div>
       </BrowserRouter >
     </div >
