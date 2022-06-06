@@ -19,7 +19,7 @@
   display: inline-block;
   grid-area: myArea2;
   border: 1px solid;
-  height: 100vh;
+  height: 88vh;
   background-color: #f7fbfe;
   transition: all 1s ease-in-out;
 }
@@ -27,7 +27,7 @@
 .dash {
   width: 100%;
   grid-area: myArea3;
-  height: 100vh;
+  height: 88vh;
   background-color: #f7fbfe;
   overflow: auto;
   scroll-behavior: smooth;
