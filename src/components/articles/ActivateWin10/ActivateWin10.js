@@ -13,23 +13,36 @@ export default function ActivateWin10() {
         <div className='main-container'>
             <h1>Activate Windows 10 using CMD.</h1>
             <p>Here is the simple way to activate your Windows 10 using CMD.</p>
-            {/* <div className="nav-section">
-
-            </div> */}
+            <div className="nav-section">
+                <h2>Navigation :</h2>
+                <ul>
+                    <li><a href="#head1">Opening CMD in adminstrator mode</a></li>
+                    <li><a href="#head2">Checking your Windows Edition</a></li>
+                    <li><a href="#head3">Cmd commands to start activating Windows</a></li>
+                    <li><a href="#head4">List of Keys According to Windows Edition</a></li>
+                </ul>
+            </div>
+            <h2 id="head1">Opening CMD in adminstrator mode</h2>
             <ul>
                 <li>Open cmd in administrator mode.</li>
             </ul>
             <img src={awt1} alt="open cmd" />
+            <h2 id="head2">Checking your Windows Edition</h2>
             <ul>
                 <li>Now, Check your windows edition.</li>
                 <li>Go to Settings &gt; About.</li>
             </ul>
             <img src={awt2} alt="open system" />
             <ul>
+                <li>Under Windows specification you will find Windows Edition</li>
                 <li>Here it's Windows 10 Pro.</li>
+            </ul>
+            <h2 id="head3">Cmd commands to start activating Windows</h2>
+            <ul>
                 <li>Now type this code in cmd <code>slmgr /ipk yourlicensekey</code>.</li>
                 <li>Replace <i>"yourlicensekey"</i> with the list below according to your windows edition.</li>
             </ul>
+            <h2 id='head4'>List of Keys According to Windows Edition</h2>
             <table style={{ marginBottom: '1em' }}>
                 <thead>
                     <th>Edition</th>
@@ -82,9 +95,6 @@ export default function ActivateWin10() {
             <ul>
                 <li>Hit Enter and wait for a while a prompt will appear</li>
             </ul>
-            <ul>
-                <li>Hit Enter and wait for a while a prompt will appear</li>
-            </ul>
             <img src={awt4} className="small-img" alt="cmd2" />
             <ul>
                 <li>Now set KMS machine address. Very Important Step!!!</li>
@@ -98,7 +108,7 @@ export default function ActivateWin10() {
             <img src={awt7} alt="cmd3" />
             <img src={awt8} className='small-img' alt="cmd3" />
             <ul>
-                <li>Done you Windows 10 is now activated.</li>
+                <li>Done your Windows 10 is now activated.</li>
             </ul>
 
             <footer>😊Thanks for Visiting!!😊</footer>

@@ -9,7 +9,7 @@ export default function RmvBg() {
     return (
         <div className='main-container'>
             <h1>Remove Image Background</h1>
-            <p>Here are the simple steps to help you remove background</p>
+            <p>Here are the simple steps to help you remove your image background.</p>
             <div className='nav-section'>
                 <h2>Navigation :</h2>
                 <ul>

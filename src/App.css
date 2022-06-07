@@ -16,11 +16,23 @@
 }
 
 .side {
-  display: inline-block;
+  position: relative;
+  left: 0;
   grid-area: myArea2;
   border: 1px solid;
   height: 89vh;
   background-color: #f7fbfe;
+  transition: all 1s ease;
+}
+.side1 {
+  position: absolute;
+  top: 4.3em;
+  left: -15em;
+  grid-area: myArea2;
+  border: 1px solid;
+  height: 89vh;
+  background-color: #f7fbfe;
+  transition: all 1s ease;
 }
 
 .dash {
@@ -38,9 +50,20 @@
   'myArea myArea myArea'
   'myArea2 myArea3 myArea3';
   grid-template-columns: auto 4fr;
+  transition: all 1s ease;
+}
+.app-container1 {
+  display: grid;
+  grid-template-areas:
+  'myArea'
+  'myArea3';
+  grid-template-columns: auto;
+  transition: all 1s ease;
 }
 
 .toTop {
+  visibility: hidden;
+  opacity: 0;
   width: 1.5em;
   height: 1.5em;
   border: 3px solid black;
@@ -51,32 +74,24 @@
   right: 3.5em;
   background-color: white;
   cursor: pointer;
+  transition: all 1s ease;
+}
+.toTop1 {
+  visibility: visible;
+  opacity: 1;
+  width: 1.5em;
+  height: 1.5em;
+  border: 3px solid black;
+  border-radius: 10em;
+  padding: 0.8em;
+  position: absolute;
+  bottom: 2em;
+  right: 3.5em;
+  background-color: white;
+  cursor: pointer;
+  transition: all 1s ease;
 }
 
-@media screen and (max-width: 700px) {
-  .app-container {
-    display: grid;
-    grid-template-areas:
-    'myArea'
-    'myArea3';
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-    } 
-    .side{
-      display: none;
-      position: absolute;
-      top: 4.3em;
-      width: 15em;
-      z-index: 1;
-      border: 1px solid;
-      height: 100vh;
-      background-color: #f7fbfe;
-    }
-    .toTop {
-      right: 2em;
-      bottom: 2em;
-    }
-}
 
 /* Main Component styling */
 .main-container {
@@ -141,8 +156,44 @@
 @media screen and (max-width: 700px) {
   .main-container table th,
     td {
-
       font-size: 1.1em;
     }
+  .app-container {
+    display: grid;
+    grid-template-areas:
+      'myArea'
+      'myArea3';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .side {
+    position: absolute;
+    top: 4.3em;
+    width: 15em;
+    left: -15em;
+    z-index: 1;
+    border: 1px solid;
+    height: 100vh;
+    background-color: #f7fbfe;
+    transition: all 1s ease;
+  }
+  .side1 {
+    position: absolute;
+    top: 4.3em;
+    left: 0em;
+    width: 15em;
+    z-index: 1;
+    border: 1px solid;
+    height: 100vh;
+    background-color: #f7fbfe;
+    transition: all 1s ease;
+  }
+
+  .toTop,
+  .toTop1 {
+    right: 2em;
+    bottom: 2em;
+  }
 }
 
