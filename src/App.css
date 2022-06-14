@@ -21,6 +21,7 @@
   grid-area: myArea2;
   border: 1px solid;
   height: 89vh;
+  max-width: 14.5em;
   background-color: #f7fbfe;
   transition: all 1s ease;
 }
@@ -103,6 +104,8 @@
 .main-container .nav-section{
   padding: 0.2em 1em;
   background-color: rgb(255, 244, 228);
+  box-shadow: 0 0 5px 0;
+  border-radius: 0.25em;
 }
 
 
@@ -113,6 +116,8 @@
   margin-top: 0.2em;
   padding: 0.2em 0;
   background-color: rgba(227, 228, 239, 0.943);
+  box-shadow: 0 0 5px 0;
+  border-radius: 0.1em;
 }
 .main-container p{
   font-size: 1.5em;
@@ -151,6 +156,9 @@
   font-size: 1.5em;
   background-color: rgba(227, 228, 239, 0.943);
   padding: 0.2em 0;
+  box-shadow: 0 0 5px 0;
+  border-radius: 0.1em;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 700px) {

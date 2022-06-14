@@ -1,0 +1,14 @@
+.main-container .about-body {
+    background-color: rgb(255, 244, 228);
+    padding: 1em;
+    color: darkolivegreen;
+    box-shadow: 0 0 5px 0;
+    border-radius: 0.25em;
+    font-weight: bold;
+}
+.main-container .pirate-boat{
+    box-shadow: 0 0 5px 0;
+    border-radius: 0.25em;
+    transform: scale(0.995);
+    margin-bottom: 0.5em;
+}

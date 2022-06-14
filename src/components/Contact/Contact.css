@@ -1,0 +1,89 @@
+/*
+.contact-body{
+    display: flex;
+    margin: 0 1.2em;
+    justify-content: space-around;
+}
+.contact-body div{
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 0 5px 0;
+    border-radius: 1em;
+}   
+.contact-body div img{
+    width: 4em;
+    height: 4em;
+    border: none;
+}
+.contact-body div p{
+    text-align: center;
+}
+*/
+.contact-body {
+    display: grid;
+    margin: 0 1.2em;
+    gap: 3em;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 2em;
+}
+
+.scene {
+    height: 10em;
+    margin: 2.5em 0;
+    perspective: 600px;
+}
+
+.contact-card {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+.contact-body .contact-card .rotate {
+    position: absolute;
+    top: -0.5em;
+    right: 1em;
+    width: 3em;
+}
+.contact-body .contact-card img {
+    width: 4em;
+    height: 4em;
+    border: none;
+}
+.contact-body .contact-card p {
+    text-align: center;
+}
+.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid;
+    box-shadow: 0 0 5px 0;
+    padding: 2em 0 1em;
+    border-radius: 1em;
+    background-color: white;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+}
+
+.card__face--back {
+    transform: rotateY(180deg);
+}
+@media only screen and (max-width:600px) {
+    .contact-body {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    .scene{
+        margin: 2.5em 0;
+    }
+}

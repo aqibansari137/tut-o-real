@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import awt1 from '../../../assets/article_images/awt/awt1.png'
 import awt2 from '../../../assets/article_images/awt/awt2.webp'
 import awt3 from '../../../assets/article_images/awt/awt3.png'
@@ -9,6 +10,10 @@ import awt8 from '../../../assets/article_images/awt/awt8.png'
 import './ActivateWin10.css'
 
 export default function ActivateWin10() {
+    useEffect(() => {
+        if (window.outerWidth < 600)
+            document.getElementById('sideDiv').classList.replace('side1', 'side');
+    }, [])
     return (
         <div className='main-container'>
             <h1>Activate Windows 10 using CMD.</h1>
@@ -111,7 +116,7 @@ export default function ActivateWin10() {
                 <li>Done your Windows 10 is now activated.</li>
             </ul>
 
-            <footer>😊Thanks for Visiting!!😊</footer>
+            <footer>😊Happy to help!!😊</footer>
         </div >
     )
 }

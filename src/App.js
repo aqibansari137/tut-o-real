@@ -9,6 +9,9 @@ import { useState } from 'react';
 import RmvBg from './components/articles/RmvBg/RmvBg';
 import arrow from './assets/arrow-up.svg';
 import ActivateWin10 from './components/articles/ActivateWin10/ActivateWin10';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+import PaidSoftFree from './components/articles/PaidSoftFree/PaidSoftFree';
 
 function App() {
   const [routeList] = useState([
@@ -24,10 +27,17 @@ function App() {
       element: <ActivateWin10 />,
       active: false,
     },
+    {
+      path: '/dwnldsoft',
+      title: 'Download Paid Software for Free',
+      element: <PaidSoftFree />,
+      active: false,
+    },
   ])
 
+
   const scrollCheck = (e) => {
-    const maxScroll = e.target.scrollHeight / 2;
+    const maxScroll = e.target.scrollHeight / 4;
     if (e.target.scrollTop > maxScroll) {
       document.getElementById('top-arrow').classList.replace('toTop', 'toTop1')
     }
@@ -64,6 +74,8 @@ function App() {
             {routeList.map((route, index) => {
               return <Route key={index} path={route.path} element={route.element} />
             })}
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<NotFound404 />} />
           </Routes>
           <img src={arrow} className="toTop" id='top-arrow' alt="arrow" onClick={() => toTheTop()} />

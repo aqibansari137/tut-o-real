@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './RmvBg.css'
 import rmvbg1 from '../../../assets/article_images/rmvbg/rmvbg1.png'
 import rmvbg2 from '../../../assets/article_images/rmvbg/rmvbg2.png'
@@ -6,6 +6,10 @@ import rmvbg3 from '../../../assets/article_images/rmvbg/rmvbg3.png'
 import rmvbg4 from '../../../assets/article_images/rmvbg/rmvbg4.png'
 import rmvbg5 from '../../../assets/article_images/rmvbg/rmvbg5.png'
 export default function RmvBg() {
+    useEffect(() => {
+        if (window.outerWidth < 600)
+            document.getElementById('sideDiv').classList.replace('side1', 'side');
+    }, [])
     return (
         <div className='main-container'>
             <h1>Remove Image Background</h1>
@@ -61,7 +65,7 @@ export default function RmvBg() {
             <ul>
                 <li>After uploading the background Click on Download.</li>
             </ul>
-            <footer>😊Thanks for Visiting!!😊</footer>
+            <footer>😊Happy to help!!😊</footer>
         </div>
     )
 }
