@@ -1,4 +1,9 @@
 import dpsf1 from '../../../assets/article_images/dpsf/dpsf1.png'
+import dpsf2 from '../../../assets/article_images/dpsf/dpsf2.png'
+import dpsf3 from '../../../assets/article_images/dpsf/dpsf3.png'
+import dpsf4 from '../../../assets/article_images/dpsf/dpsf4.png'
+import dpsf5 from '../../../assets/article_images/dpsf/dpsf5.png'
+import dpsf6 from '../../../assets/article_images/dpsf/dpsf6.png'
 
 export default function PaidSoftFree() {
     return (
@@ -26,6 +31,35 @@ export default function PaidSoftFree() {
                 <li>Click in the link to download the <a href='https://www.qbittorrent.org/download.php' target='_blank' rel="noreferrer">Qbit Torrent</a></li>
             </ul>
             <h2 id="head3">Searching and Downloading software</h2>
+            <ul>
+                <li>Open Chrome browser.</li>
+                <li>Turn on TouchVPN from the extension menu.</li>
+            </ul>
+            <img src={dpsf2} alt="extension open" />
+            <ul>
+                <li>CLick on Connect to connect VPN.</li>
+                <li>Now go to this website <a href="https://1337x.st/" target='_blank' rel="noreferrer">1337x.st</a>.</li>
+            </ul>
+            <img src={dpsf3} alt="1337x" />
+            <ul>
+                <li>Type in search box whatever you want to downlaod.</li>
+                <li>Click on search.</li>
+            </ul>
+            <img src={dpsf4} alt="1337x search" />
+            <ul>
+                <li>Click on the result which has higher seed(se) to get good download speed.</li>
+                <li>Then Click on 'Magnet Download'.</li>
+                <li>A pop-up will appear, asking to open Qbit Torrent.</li>
+                <li>Click on open.</li>
+            </ul>
+            <img src={dpsf6} alt="Magnet download" />
+            <img src={dpsf5} alt="Qbit download" />
+            <ul>
+                <li>Click on Ok your download will start.</li>
+                <li>Done.</li>
+                <li>You can download anything from here Movies, Software, Games etc.</li>
+            </ul>
+            <footer>😊Happy to help!!😊</footer>
         </div>
     )
 }
