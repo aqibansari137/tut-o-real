@@ -6,6 +6,7 @@ export default function Sidebar({ routeList }) {
     const [srchText, setSrchText] = useState('')
     const [fltrList, setFltrList] = useState([])
     const [menuList] = useState(routeList)
+
     useEffect(() => {
         setFltrList(menuList.filter(item => item.title.toLowerCase().includes(srchText.toLowerCase())));
 
@@ -14,7 +15,7 @@ export default function Sidebar({ routeList }) {
     return (
         <div className='side-menu'>
             <div className='mob-nav'>
-                <NavLink to='/'>Dashboard</NavLink>
+                <NavLink to='/'>Home</NavLink>
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/contact'>Contact</NavLink>
             </div>

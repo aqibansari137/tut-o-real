@@ -1,4 +1,3 @@
-import React from 'react'
 import ContactGif from '../../assets/contact.webp'
 import phone from '../../assets/phone-call.svg'
 import location from '../../assets/gps.svg'

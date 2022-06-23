@@ -1,4 +1,3 @@
-import React from 'react'
 import { NavLink } from 'react-router-dom'
 import giphy from '../../assets/giphy.webp'
 import './About.css'

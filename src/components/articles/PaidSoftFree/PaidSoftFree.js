@@ -1,11 +1,6 @@
-import React, { useEffect } from 'react'
 import dpsf1 from '../../../assets/article_images/dpsf/dpsf1.png'
 
 export default function PaidSoftFree() {
-    useEffect(() => {
-        if (window.outerWidth < 600)
-            document.getElementById('sideDiv').classList.replace('side1', 'side');
-    }, [])
     return (
         <div className='main-container'>
             <h1>Downlaod Paid Software for free</h1>

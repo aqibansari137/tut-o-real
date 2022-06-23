@@ -1,5 +1,4 @@
 import './App.css';
-import Dashboard from './components/Dashbard/Dashboard';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import menu from './assets/menu-bar.svg'
@@ -12,29 +11,37 @@ import ActivateWin10 from './components/articles/ActivateWin10/ActivateWin10';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import PaidSoftFree from './components/articles/PaidSoftFree/PaidSoftFree';
+import Home from './components/Home/Home';
 
 function App() {
   const [routeList] = useState([
     {
-      path: '/rmbg',
+      path: '/article/rmbg',
       title: 'Remove Image Background',
       element: <RmvBg />,
       active: false,
     },
     {
-      path: '/activatewindows',
+      path: '/article/activatewindows',
       title: 'Activate Windows 10',
       element: <ActivateWin10 />,
       active: false,
     },
     {
-      path: '/dwnldsoft',
+      path: '/article/dwnldsoft',
       title: 'Download Paid Software for Free',
       element: <PaidSoftFree />,
       active: false,
     },
   ])
 
+  const sideCLick = () => {
+    let str = window.location.pathname.substring(1, 8)
+    let str1 = window.location.pathname
+    if (str === 'article' || str1 === '/' || str1 === '/contact' || str1 === '/about')
+      if (window.outerWidth < 600)
+        document.getElementById('sideDiv').classList.replace('side1', 'side');
+  }
 
   const scrollCheck = (e) => {
     const maxScroll = e.target.scrollHeight / 4;
@@ -65,12 +72,12 @@ function App() {
           <img src={menu} alt="menu" className='menu-btn' onClick={() => toggleSidebar()} />
           <Navbar />
         </div>
-        <div className='side' id='sideDiv'>
+        <div className='side' id='sideDiv' onClick={sideCLick}>
           <Sidebar routeList={routeList} />
         </div>
         <div className="dash" onScroll={scrollCheck} id='dash-ele' onClick={() => hideSidebar()}>
           <Routes>
-            <Route path='/' element={<Dashboard />} />
+            <Route path='/' element={<Home />} />
             {routeList.map((route, index) => {
               return <Route key={index} path={route.path} element={route.element} />
             })}

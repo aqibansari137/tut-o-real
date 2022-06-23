@@ -8,9 +8,9 @@ export default function Navbar() {
     }, []);
     return (
         <div className='nav-container'>
-            <img src={logo} alt='Logo' width='250px' style={{ marginLeft: '1em' }} />
+            <NavLink className='nav-link-head' to='/'><img src={logo} alt='Logo' width='250px' style={{ marginLeft: '1em' }} /></NavLink>
             <div className='nav-link'>
-                <NavLink to='/'>Dashboard</NavLink>
+                <NavLink to='/'>Home</NavLink>
                 <NavLink to='/about'>About</NavLink>
                 <NavLink to='/contact'>Contact</NavLink>
             </div>
